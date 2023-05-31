@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:focus/views/home_focus.dart';
+import 'package:focus/views/table_bill.dart';
 import 'package:focus/views/tables.dart';
 
 void main() {
@@ -12,11 +13,13 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Focus',
-      initialRoute: 'home',
+      initialRoute: 'tables',
       routes: {
         'home': (BuildContext context) => HomePage(),
-        'tables': (BuildContext context) => Tables()
+        'tables': (BuildContext context) => Tables(),
+        'billTable': (BuildContext context) => Bill()
       },
     );
   }

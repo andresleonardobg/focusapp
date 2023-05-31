@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:focus/views/side_menu.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -6,20 +7,12 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      drawer: SideMenu(),
       appBar: AppBar(
         title: Text('Focus'),
       ),
       body: ListView(
-        children: <Widget>[
-          ListTile(
-            onTap: () {
-              Navigator.pushNamed(context, 'tables');
-            },
-            leading: Icon(Icons.table_bar),
-            title: Text('Mesas'),
-            trailing: Icon(Icons.keyboard_arrow_right),
-          )
-        ],
+        children: <Widget>[],
       ),
     );
   }
